@@ -1,0 +1,15 @@
+asyncio==3.4.3
+aiohttp==3.0.5
+peewee==3.1.2
+peewee_async==0.5.11
+jinja2==2.10
+aiohttp_jinja2==0.15.0
+aiohttp_session==2.3.0
+aioredis==1.1.0
+cchardet==2.1.1
+aiodns==1.1.1
+async_timeout==2.0.0
+attrs==17.4.0
+multidict==4.1.0
+yarl==1.1.1
+aiomysql==0.0.12

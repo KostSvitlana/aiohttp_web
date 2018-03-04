@@ -1,0 +1,8 @@
+*.py[cod]
+settings.py
+
+virtual_env/
+.vscode/
+__pycache
+static/
+apps/
