@@ -1,13 +1,16 @@
 from aiohttp import web
+import aiohttp_jinja2
 
-
+@aiohttp_jinja2.template('index.html')
 async def index(request):
-    return web.Response(text='Hello Aiohttp!')
+    return {'text':'Hello Word!'}
 
+@aiohttp_jinja2.template('index.html')
 async def handler(request):
     name = request.match_info.get('name', "Anonymous")
     text = "Hello, " + name
-    return web.Response(text=text)
+    return {'text': text}
 
-# async def page(request):
-#     return templ('index', request, {'key':'val'})
+@aiohttp_jinja2.template('index.html')
+async def page(request):
+    return {'text': "Some text here"}

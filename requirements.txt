@@ -1,7 +1,7 @@
 asyncio==3.4.3
 aiohttp==3.0.5
 peewee==3.1.2
-peewee_async==0.5.11
+peewee_async==0.5.10
 jinja2==2.10
 aiohttp_jinja2==0.15.0
 aiohttp_session==2.3.0

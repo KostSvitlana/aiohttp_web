@@ -1,15 +1,18 @@
 import asyncio
-import peewee
+from peewee import CharField, Model 
 import peewee_async
 
-database = peewee_async.MySQLDatabase("test")
+database = peewee_async.MySQLDatabase('test', charset='utf8mb4')
+# database = peewee_async.MySQLDatabase('test', user='db_user', password='password',
+#                          host='127.0.0.1', port=3316, charset='utf8mb4')
 
-class TestModel(peewee.Model):
-    text = peewee.CharField()
-
+class BaseModel(Model):
     class Meta:
         database = database
+        
+class User(BaseModel):
+    text = CharField()
 
-TestModel.create_table(True)
-TestModel.create(text="apple")
+User.create_table(True)
+User.create(text="apple")
 database.close()
